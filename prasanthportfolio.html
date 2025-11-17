@@ -3,230 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prasanth • Portfolio</title>
+  <title>Prasanth • AI & ML Engineer Portfolio</title>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" 
+        rel="stylesheet">
 
   <style>
     body {
-      background: linear-gradient(to bottom, #5b21b6, #4338ca, #2563eb);
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0A0F24, #1A237E, #0D47A1);
+      color: white;
+      padding: 0;
+    }
+
+    .header {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .name {
+      margin-top: 20px;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .role {
+      font-size: 18px;
+      opacity: 0.8;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      border-left: 6px solid #4FC3F7;
+      padding-left: 12px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.7;
+      font-size: 14px;
     }
   </style>
 </head>
 
-<body class="text-white font-sans antialiased">
+<body>
 
-  <!-- Header -->
-  <header class="max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
-    <div>
-      <h1 class="text-3xl font-extrabold">Prasanth</h1>
-      <p class="text-sm text-white/80">B.E CSE (AI & ML) • 3rd Year</p>
-    </div>
-
-    <nav class="space-x-6 text-sm text-white/90">
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#projects" class="hover:underline">Projects</a>
-      <a href="#skills" class="hover:underline">Skills</a>
-      <a href="#resume" class="hover:underline">Resume</a>
-      <a href="#contact" class="hover:underline">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
-    <!-- Text -->
-    <div>
-      <h2 class="text-5xl font-bold leading-tight">
-        Hi, I'm <span class="text-white/95">Prasanth</span> — building AI products.
-      </h2>
-
-      <p class="mt-6 text-lg text-white/80">
-        I design and build production-ready applications, intelligent systems, and engine prototypes.
-        Skilled in full-stack development, AI/ML, and system design.
-      </p>
-
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="#projects"
-           class="px-5 py-3 rounded-full bg-white/10 border border-white/20 text-sm hover:scale-105 transition">
-          View Projects
-        </a>
-
-        <a href="#contact"
-           class="px-5 py-3 rounded-full bg-white text-purple-700 font-medium hover:shadow-lg transition">
-          Contact Me
-        </a>
-
-        <a href="#resume"
-           class="px-5 py-3 rounded-full bg-white/5 border border-white/20 text-sm font-medium">
-          Download Resume
-        </a>
-      </div>
-
-      <p class="mt-6 text-sm text-white/70">📍 Chennai • 💼 Open for internships</p>
-    </div>
-
-    <!-- Image Card -->
-    <div class="p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md">
-      <img src="profile.jpg"
-           class="w-56 h-56 object-cover rounded-2xl mx-auto shadow-2xl border border-white/30"
-           alt="Prasanth Image" />
-
-      <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-white/80">
-        <div>
-          <p class="text-xs text-white/60">College</p>
-          <p class="font-medium">Mangayarkarasi College of Engineering</p>
-        </div>
-        <div>
-          <p class="text-xs text-white/60">Degree</p>
-          <p class="font-medium">B.E CSE (AI & ML)</p>
-        </div>
-        <div>
-          <p class="text-xs text-white/60">Interests</p>
-          <p class="font-medium">AI • Data Analytics • ML</p>
-        </div>
-        <div>
-          <p class="text-xs text-white/60">Availability</p>
-          <p class="font-medium">Internships • Freelance</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="header">
+    <img src="profile.jpg" alt="Profile" class="profile-img" />
+    <div class="name">Prasanth</div>
+    <div class="role">AI & ML Engineer • CSE-AIML Student • Developer</div>
+  </div>
 
   <!-- About -->
-  <section id="about" class="max-w-6xl mx-auto px-6 py-12">
-    <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
-      <h3 class="text-2xl font-semibold">About Me</h3>
-      <p class="mt-4 text-white/80">
-        I am a third-year Computer Science student specializing in Artificial Intelligence and Machine Learning.
-      </p>
-
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-
-        <div>
-          <p class="text-sm text-white/60">Core Strengths</p>
-          <ul class="list-disc list-inside mt-2">
-            <li>Model integration (LLaMA, Hugging Face)</li>
-            <li>Full-stack applications (Next.js, Node.js)</li>
-            <li>System & Engine development</li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="text-sm text-white/60">Tools</p>
-          <ul class="list-disc list-inside mt-2">
-            <li>React • Tailwind • Next.js</li>
-            <li>Python • Streamlit • PyTorch</li>
-            <li>GitHub • Docker • Vercel</li>
-          </ul>
-        </div>
-
-        <div>
-          <p class="text-sm text-white/60">Building Now</p>
-          <ul class="list-disc list-inside mt-2">
-            <li>AI healthcare chatbot</li>
-            <li>AI-powered eCommerce website</li>
-          </ul>
-        </div>
-
-      </div>
+  <div class="section">
+    <h2>About Me</h2>
+    <div class="card">
+      Hi, I'm <strong>Prasanth</strong> 👋, a passionate student developer specializing in  
+      <b>Artificial Intelligence</b>, <b>Machine Learning</b>, and <b>Full-Stack Development</b>.  
+      I build intelligent systems, powerful apps, and beautiful user experiences.
     </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="max-w-6xl mx-auto px-6 py-12">
-    <h3 class="text-2xl font-semibold">Selected Projects</h3>
-
-    <div class="mt-6 grid gap-6 md:grid-cols-2">
-      <div class="p-6 bg-white/10 rounded-2xl backdrop-blur-md border border-white/20">
-        <h4 class="text-lg font-semibold">AI Healthcare Chatbot</h4>
-        <p class="mt-2 text-white/80">
-          Medical assistant chatbot built using LLaMA and Streamlit.
-        </p>
-      </div>
-
-      <div class="p-6 bg-white/10 rounded-2xl backdrop-blur-md border border-white/20">
-        <h4 class="text-lg font-semibold">AI eCommerce Website</h4>
-        <p class="mt-2 text-white/80">
-          Modern full-stack store with AI recommendations.
-        </p>
-      </div>
-
-      <div class="p-6 bg-white/10 rounded-2xl backdrop-blur-md border border-white/20">
-        <h4 class="text-lg font-semibold">2D/3D Game Engine</h4>
-        <p class="mt-2 text-white/80">
-          Engine architecture for 2D & 3D rendering.
-        </p>
-      </div>
-
-      <div class="p-6 bg-white/10 rounded-2xl backdrop-blur-md border border-white/20">
-        <h4 class="text-lg font-semibold">AI Tools Workshop</h4>
-        <p class="mt-2 text-white/80">
-          Hands-on training for school students about AI tools.
-        </p>
-      </div>
-    </div>
-  </section>
+  </div>
 
   <!-- Skills -->
-  <section id="skills" class="max-w-6xl mx-auto px-6 py-12">
-    <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20">
-      <h3 class="text-2xl font-semibold">Skills</h3>
-
-      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="p-4 bg-white/10 rounded-xl">Excel / PowerBI</div>
-        <div class="p-4 bg-white/10 rounded-xl">AI / ML</div>
-        <div class="p-4 bg-white/10 rounded-xl">Python • C++</div>
-        <div class="p-4 bg-white/10 rounded-xl">LLaMA / Hugging Face</div>
-        <div class="p-4 bg-white/10 rounded-xl">Streamlit</div>
-        <div class="p-4 bg-white/10 rounded-xl">Numpy / Statistics</div>
-        <div class="p-4 bg-white/10 rounded-xl">Data Visualization</div>
-        <div class="p-4 bg-white/10 rounded-xl">Deep Learning</div>
-      </div>
+  <div class="section">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li>Python, JavaScript, C, Java</li>
+        <li>Machine Learning, Deep Learning</li>
+        <li>Next.js, React, Node.js</li>
+        <li>UI/UX Prototyping, Figma</li>
+        <li>Google Cloud, Hugging Face</li>
+      </ul>
     </div>
-  </section>
+  </div>
 
-  <!-- Resume -->
-  <section id="resume" class="max-w-6xl mx-auto px-6 py-12">
-    <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex flex-col md:flex-row justify-between gap-6">
-      <div>
-        <h3 class="text-2xl font-semibold">Resume</h3>
-        <p class="mt-2 text-white/80">Clean resume for placements.</p>
-      </div>
-
-      <a href="resume.pdf"
-         class="px-5 py-3 rounded-full bg-white text-purple-700 font-bold">
-        Download PDF
-      </a>
+  <!-- Projects -->
+  <div class="section">
+    <h2>Projects</h2>
+    <div class="card">
+      <strong>Healthcare AI Chatbot</strong><br>
+      Built using LLaMA model, Hugging Face, and Streamlit.
     </div>
-  </section>
+
+    <div class="card">
+      <strong>AI-Powered eCommerce Website</strong><br>
+      Full-stack app with product recommendations and smart search.
+    </div>
+  </div>
 
   <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-6 py-12">
-    <div class="p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex flex-col md:flex-row justify-between gap-6">
-      <div>
-        <h3 class="text-2xl font-semibold">Let's build something together</h3>
-        <p class="mt-2 text-white/80">
-          Email: <strong>prasanthdhiyanesh2@gmail.com</strong>
-        </p>
-      </div>
-
-      <a href="mailto:prasanthdhiyanesh2@gmail.com"
-         class="px-5 py-3 rounded-full bg-white text-purple-700 font-medium">
-        Email Me
-      </a>
+  <div class="section">
+    <h2>Contact</h2>
+    <div class="card">
+      📧 Email: yourmail@gmail.com<br>
+      💼 LinkedIn: your-link-here<br>
+      🐙 GitHub: your-github-username
     </div>
-  </section>
+  </div>
 
-  <!-- Footer -->
-  <footer class="max-w-6xl mx-auto px-6 py-6 text-sm text-white/80 text-center">
-    © <span id="year"></span> Prasanth — All rights reserved.
-  </footer>
-
-  <script>
-    document.getElementById("year").innerText = new Date().getFullYear();
-  </script>
+  <div class="footer">
+    © 2025 Prasanth — Designed with ❤️ by Akka
+  </div>
 
 </body>
 </html>
