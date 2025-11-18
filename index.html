@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Professional Portfolio</title>
-    <meta name="description" content="Portfolio of [Your Name] - Web Developer, Designer, and Creative Professional">
+    <title>Prasanth M P - Professional Portfolio</title>
+    <meta name="description" content="Portfolio of Prasanth M P - Web Developer, AI & ML Enthusiast, and Creative Professional">
     <style>
         * {
             margin: 0;
@@ -31,6 +31,14 @@
             overflow-x: hidden;
         }
 
+        /* Dark Theme as Default */
+        body.dark-theme {
+            --text-dark: #f8fafc;
+            --text-light: #cbd5e1;
+            --bg-light: #1e293b;
+            --white: #0f172a;
+        }
+
         /* Animated Background */
         #particles-canvas {
             position: fixed;
@@ -40,6 +48,10 @@
             height: 100%;
             z-index: -1;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        body.dark-theme #particles-canvas {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
         }
 
         /* Floating Gradient Orbs */
@@ -107,20 +119,8 @@
             transform: scale(1.1) rotate(15deg);
         }
 
-        /* Dark Theme */
-        body.dark-theme {
-            --text-dark: #f8fafc;
-            --text-light: #cbd5e1;
-            --bg-light: #1e293b;
-            --white: #0f172a;
-        }
-
-        body.dark-theme #particles-canvas {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
-
-        body.dark-theme nav {
-            background: rgba(15, 23, 42, 0.95);
+        body.dark-theme .theme-toggle {
+            background: rgba(30, 41, 59, 0.9);
         }
 
         /* Navigation */
@@ -136,9 +136,17 @@
             transition: all 0.3s ease;
         }
 
+        body.dark-theme nav {
+            background: rgba(15, 23, 42, 0.95);
+        }
+
         nav.scrolled {
             background: rgba(255, 255, 255, 0.95);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        body.dark-theme nav.scrolled {
+            background: rgba(15, 23, 42, 0.98);
         }
 
         nav .container {
@@ -262,6 +270,7 @@
             margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.2s backwards;
             min-height: 2.5rem;
+            color: #f0f0f0;
         }
 
         .status-badge {
@@ -321,6 +330,10 @@
         .btn-primary {
             background: var(--white);
             color: var(--primary);
+        }
+
+        body.dark-theme .btn-primary {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
         }
 
         .btn-primary:hover {
@@ -634,6 +647,11 @@
             box-shadow: var(--shadow-hover);
         }
 
+        .contact-item a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
@@ -668,6 +686,10 @@
             color: var(--white);
             text-align: center;
             padding: 2rem;
+        }
+
+        body.dark-theme footer {
+            background: #0a0f1a;
         }
 
         footer p {
@@ -711,6 +733,10 @@
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             }
 
+            body.dark-theme nav ul {
+                background: rgba(15, 23, 42, 0.98);
+            }
+
             nav ul.active {
                 display: flex;
             }
@@ -746,7 +772,7 @@
         }
     </style>
 </head>
-<body>
+<body class="dark-theme">
     <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
 
@@ -763,12 +789,12 @@
     <div class="gradient-orb orb-3"></div>
 
     <!-- Theme Toggle -->
-    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">☀️</button>
 
     <!-- Navigation -->
     <nav id="navbar">
         <div class="container">
-            <a href="#home" class="logo">YourName</a>
+            <a href="#home" class="logo">Prasanth M P</a>
             <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
             <ul id="nav-menu">
                 <li><a href="#home">Home</a></li>
@@ -784,7 +810,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="status-badge">🟢 Available for Work</div>
-            <h1>Hi, I'm Your Name</h1>
+            <h1>Hi, I'm Prasanth M P</h1>
             <p class="typing-text" id="typingText"></p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -801,36 +827,37 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        Hello! I'm a passionate web developer and designer dedicated to creating 
+                        Hello! I'm Prasanth M P, a passionate web developer and AI & ML enthusiast dedicated to creating 
                         beautiful, functional, and user-friendly digital experiences.
                     </p>
                     <p>
                         With expertise in modern web technologies and a keen eye for design, 
-                        I bring ideas to life through clean code and creative solutions.
+                        I bring ideas to life through clean code and creative solutions. I specialize in 
+                        full-stack development, machine learning projects, and e-commerce platforms.
                     </p>
                     <p>
-                        I'm currently pursuing my degree in Computer Science and actively seeking 
-                        opportunities to collaborate on exciting projects and learn from industry professionals.
+                        Based in Tamil Nadu, India, I'm actively seeking opportunities to collaborate on 
+                        exciting projects and learn from industry professionals.
                     </p>
                     <a href="resume.pdf" class="btn btn-primary" style="margin-top: 1rem;">Download Resume</a>
                     
                     <div class="stats-grid">
                         <div class="stat-card">
-                            <div class="stat-number" data-target="50">0</div>
-                            <div class="stat-label">Projects</div>
+                            <div class="stat-number" data-target="6">0</div>
+                            <div class="stat-label">GitHub Projects</div>
                         </div>
                         <div class="stat-card">
                             <div class="stat-number" data-target="15">0</div>
                             <div class="stat-label">Technologies</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number" data-target="3">0</div>
-                            <div class="stat-label">Years Experience</div>
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">Commits</div>
                         </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://via.placeholder.com/400x500" alt="Your Name">
+                    <img src="https://via.placeholder.com/400x500/667eea/ffffff?text=Prasanth+M+P" alt="Prasanth M P">
                 </div>
             </div>
         </div>
@@ -848,19 +875,19 @@
                         <span class="tag">CSS3</span>
                         <span class="tag">JavaScript</span>
                         <span class="tag">React</span>
-                        <span class="tag">Vue.js</span>
+                        <span class="tag">Responsive Design</span>
                         <span class="tag">Tailwind CSS</span>
                     </div>
                 </div>
                 <div class="skill-card">
-                    <h3>Backend Development</h3>
+                    <h3>AI & Machine Learning</h3>
                     <div class="skill-tags">
-                        <span class="tag">Node.js</span>
                         <span class="tag">Python</span>
-                        <span class="tag">Express</span>
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">REST API</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Face Detection</span>
+                        <span class="tag">Image Classification</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">ML Models</span>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -869,9 +896,9 @@
                         <span class="tag">Git</span>
                         <span class="tag">GitHub</span>
                         <span class="tag">VS Code</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">Docker</span>
+                        <span class="tag">Node.js</span>
                         <span class="tag">npm</span>
+                        <span class="tag">Vercel</span>
                     </div>
                 </div>
             </div>
@@ -884,35 +911,42 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">🚀</div>
+                    <div class="project-image">😷</div>
                     <div class="project-content">
-                        <h3>AI-Powered Web App</h3>
-                        <p>A modern web application built with React and Node.js featuring user authentication, real-time updates, and AI integration.</p>
+                        <h3>Face Mask Detection</h3>
+                        <p>AI-powered face mask detection system using machine learning and computer vision to identify whether people are wearing masks.</p>
                         <div class="project-links">
-                            <a href="#">Live Demo →</a>
-                            <a href="#">GitHub →</a>
+                            <a href="https://github.com/prasanthmpp2/Face_Mask_Detection" target="_blank">GitHub →</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">💼</div>
+                    <div class="project-image">🛒</div>
                     <div class="project-content">
                         <h3>E-Commerce Platform</h3>
-                        <p>Full-stack e-commerce solution with shopping cart, payment integration, and admin dashboard.</p>
+                        <p>Modern e-commerce product page with responsive design, interactive features, and smooth animations for optimal user experience.</p>
                         <div class="project-links">
-                            <a href="#">Live Demo →</a>
-                            <a href="#">GitHub →</a>
+                            <a href="https://github.com/prasanthmpp2/E-commerce-Product-Page-1" target="_blank">GitHub →</a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">🎨</div>
+                    <div class="project-image">🐾</div>
                     <div class="project-content">
-                        <h3>Creative Portfolio</h3>
-                        <p>Modern portfolio website with smooth animations and responsive design for a photography client.</p>
+                        <h3>Animal Classifier</h3>
+                        <p>Machine learning project that classifies different animals using image recognition and deep learning algorithms.</p>
                         <div class="project-links">
-                            <a href="#">Live Demo →</a>
-                            <a href="#">GitHub →</a>
+                            <a href="https://github.com/prasanthmpp2/animal_classifier" target="_blank">GitHub →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">❓</div>
+                    <div class="project-content">
+                        <h3>Interactive Quiz App</h3>
+                        <p>Dynamic quiz application with interactive UI, score tracking, and engaging user experience built with modern web technologies.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/prasanthmpp2/quiz" target="_blank">GitHub →</a>
                         </div>
                     </div>
                 </div>
@@ -932,24 +966,23 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <span>📧</span>
-                        <a href="mailto:your.email@example.com" style="color: var(--text-light); text-decoration: none;">
-                            your.email@example.com
+                        <a href="mailto:prasanthdhiyanesh2@gmail.com">
+                            prasanthdhiyanesh2@gmail.com
                         </a>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
-                        <span>Your City, Country</span>
+                        <span>Madurai, Tamil Nadu, India</span>
                     </div>
                     <div class="contact-item">
                         <span>📱</span>
-                        <span>+1 (234) 567-8900</span>
+                        <a href="tel:+919043209409">+91 9043209409</a>
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/yourusername" target="_blank" title="GitHub">G</a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn">in</a>
-                    <a href="https://twitter.com/yourusername" target="_blank" title="Twitter">𝕏</a>
-                    <a href="mailto:your.email@example.com" target="_blank" title="Email">✉</a>
+                    <a href="https://github.com/prasanthmpp2" target="_blank" title="GitHub">G</a>
+                    <a href="https://www.linkedin.com/in/prasanthmpp2" target="_blank" title="LinkedIn">in</a>
+                    <a href="mailto:prasanthdhiyanesh2@gmail.com" target="_blank" title="Email">✉</a>
                 </div>
             </div>
         </div>
@@ -958,7 +991,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Your Name. All rights reserved. Made with ❤️</p>
+            <p>&copy; 2025 Prasanth M P. All rights reserved. Made with ❤️</p>
         </div>
     </footer>
 
@@ -1053,9 +1086,9 @@
         const typingText = document.getElementById('typingText');
         const phrases = [
             'Web Developer',
-            'Creative Designer',
+            'AI & ML Enthusiast',
             'Problem Solver',
-            'Tech Enthusiast'
+            'Full Stack Developer'
         ];
         let phraseIndex = 0;
         let charIndex = 0;
@@ -1141,11 +1174,11 @@
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         }
 
-        // Load saved theme
+        // Load saved theme (or keep dark as default)
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-theme');
-            document.getElementById('themeBtn').textContent = '☀️';
+        if (savedTheme === 'light') {
+            document.body.classList.remove('dark-theme');
+            document.getElementById('themeBtn').textContent = '🌙';
         }
 
         // Mobile Menu
