@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="assets/image/logo.png" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Prasanth M P - Professional Portfolio</title>
     <meta name="description" content="Portfolio of Prasanth M P - Web Developer, AI & ML Enthusiast, and Creative Professional">
     <style>
@@ -194,11 +194,11 @@
             nav {
                 padding: 1rem 0;
             }
-
+            
             nav .container {
                 padding: 0 2rem;
             }
-
+            
             nav .logo {
                 font-size: 1.5rem;
             }
@@ -1204,7 +1204,7 @@
                         exciting projects and learn from industry professionals.
                     </p>
                     <a href="resume.pdf" class="btn btn-primary" style="margin-top: 1rem;">Download Resume</a>
-
+                    
                     <div class="stats-grid">
                         <div class="stat-card">
                             <div class="stat-number" data-target="6">0</div>
@@ -1331,7 +1331,6 @@
                     <div class="contact-item">
                         <span>📧</span>
                         <a href="mailto:prasanthdhiyanesh2@gmail.com" onclick="handleEmailClick(event)">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=prasanthdhiyanesh2@gmail.com" target="_blank" rel="noopener noreferrer">
                             prasanthdhiyanesh2@gmail.com
                         </a>
                         <button onclick="copyEmail()" class="copy-btn" title="Copy email">
@@ -1350,7 +1349,7 @@
                         <a href="tel:+919043209409">+91 9043209409</a>
                     </div>
                 </div>
-
+                
                 <!-- Toast notification -->
                 <div id="emailToast" class="email-toast">Email copied to clipboard! ✓</div>
                 
@@ -1369,7 +1368,6 @@
                     </a>
                     <!-- Email Icon -->
                     <a href="mailto:prasanthdhiyanesh2@gmail.com" onclick="return handleEmailClick(event)" title="Send Email" aria-label="Send Email">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=prasanthdhiyanesh2@gmail.com" target="_blank" rel="noopener noreferrer" title="Send Email" aria-label="Send Email">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
                         </svg>
@@ -1382,7 +1380,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Prasanth M P. All rights reserved. Made by  Prasanth M P</p>
+            <p>&copy; 2025 Prasanth M P. All rights reserved. Made by Prasanth M P</p>
         </div>
     </footer>
 
@@ -1498,7 +1496,7 @@
 
         function typeEffect() {
             const currentPhrase = phrases[phraseIndex];
-
+            
             if (isDeleting) {
                 typingText.textContent = currentPhrase.substring(0, charIndex - 1);
                 charIndex--;
@@ -1526,7 +1524,7 @@
 
         function animateStats() {
             if (animated) return;
-
+            
             statNumbers.forEach(stat => {
                 const target = parseInt(stat.getAttribute('data-target'));
                 const increment = target / 50;
