@@ -1571,39 +1571,7 @@
             }, 10);
         }, { passive: true });
 
-        // Email Copy Function
-        function copyEmail() {
-            const email = 'prasanthdhiyanesh2@gmail.com';
-            
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(email).then(() => {
-                    showToast();
-                }).catch(() => {
-                    fallbackCopyEmail(email);
-                });
-            } else {
-                fallbackCopyEmail(email);
-            }
-        }
-
-        function fallbackCopyEmail(email) {
-            const textarea = document.createElement('textarea');
-            textarea.value = email;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            document.body.appendChild(textarea);
-            textarea.select();
-            
-            try {
-                document.execCommand('copy');
-                showToast();
-            } catch (err) {
-                alert('Email: ' + email);
-            }
-            
-            document.body.removeChild(textarea);
-        }
-
+       
         function showToast() {
             const toast = document.getElementById('emailToast');
             toast.classList.add('show');
